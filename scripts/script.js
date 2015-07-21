@@ -118,12 +118,16 @@ var userName, nickNames, userOne, userTwo, userObjOne, userObjTwo, images
 
     socket.on('new position', function(data){
 
-			if (data.nick === userObjOne.name && !endGameFlag){
+			if (data.nick === userOne && !endGameFlag){
 				$('.inBox').eq(data.idx).css('background-image', 'url('+ img[0]+')');
 				$inBox.eq(data.idx).attr('id', 'O');
+				$inBox.addClass('animated flipInX')
+				
 			}else{
 				$('.inBox').eq(data.idx).css('background-image', 'url('+ img[1]+')');
 				$inBox.eq(data.idx).attr('id', 'X');
+				$inBox.addClass('animated flipInX')
+
 			}
 
 			if(decision(data.idx)){
@@ -138,9 +142,11 @@ var userName, nickNames, userOne, userTwo, userObjOne, userObjTwo, images
 			}else{
 				var ids = [];
 				for (i=0; i<9; i++){
-					ids.push($inBox.eq(i).attr('id'));
+					if($inBox.eq(i).attr('id') != undefined){
+						ids.push($inBox.eq(i).attr('id'));	
+					}
 				}
-				if (ids.length === 6){
+				if (ids.length === 9){
 						imgDraw();
 						tie();
 						endGameFlag = true;
@@ -160,7 +166,9 @@ var userName, nickNames, userOne, userTwo, userObjOne, userObjTwo, images
 			$inBox.eq(3).css('background-image', 'url('+ img[2]+')');
   		$inBox.eq(4).css('background-image', 'url('+ img[3]+')');
   		$inBox.eq(5).css('background-image', 'url('+ img[4]+')');
+  		$inBox.eq(7).css('background-image', 'url()');
   		$inBox.eq(7).css('background-image', 'url('+ img[5]+')');
+  		
     }
 
    	// tie message
@@ -168,7 +176,8 @@ var userName, nickNames, userOne, userTwo, userObjOne, userObjTwo, images
    		$inBox.eq(3).css('background-image', 'url('+ img[6]+')');
    		$inBox.eq(4).css('background-image', 'url('+ img[7]+')');
    		$inBox.eq(5).css('background-image', 'url('+ img[8]+')');
-   		$inBox.eq(7).css('background-image', 'url('+ img[5]+')'); 
+   		$inBox.eq(7).css('background-image', 'url('+ img[5]+')');
+   		$inBox.addClass('animated flipInX')
    	}
 
 
