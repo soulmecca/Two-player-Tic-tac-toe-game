@@ -1,0 +1,274 @@
+/*@import url(http://fonts.googleapis.com/css?family=Glegoo|Antic+Slab|Codystar|Poiret+One|Mate+SC|Rokkitt|Josefin+Slab|Special+Elite|Sanchez|Megrim|Black+Ops+One|Love+Ya+Like+A+Sister);
+/*@import url(prefixes.css);*/
+
+body {
+  
+  background-color: hsla(0,0%,90%,1);  
+  background-image: linear-gradient(-45deg, hsla(0,0%,0%,0), hsla(0,0%,0%,.05) );
+  background-size: 5px;
+}
+
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+/*
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}*/
+.clear {
+  clear: both;
+  display: table;
+  *zoom: 1;
+}
+
+
+/*
+  ========================================
+  Box sizing reset
+  ========================================
+*/
+
+/**,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*/
+
+.outmost{
+	margin: auto;
+	margin-top: 20px;
+	width: 400px;
+	height: 550px;
+	/*border: 1px solid red;*/
+}
+
+
+.outter{
+	margin: 20px auto 0px;
+	background-image: url("../styles/frame.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+  max-width: 300px;
+  width: 300px;
+}
+
+.frame {
+	position: relative;
+	left: 8px;
+	bottom: 3px;
+	margin: 25px;
+	/*margin-left: 22px;*/
+	width: 290px;
+	height:290px;
+	/*border: 1px solid blue;*/
+
+}
+
+.box {
+
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: black;
+  display: inline-block;
+  
+  /*transition: all ease 0.3s;*/
+
+	margin: 5px;
+  /*border: 1px solid #ddd;*/
+  color: transparent;
+  display: inline-block;
+  font-size: 44px;
+  height:85px;
+  width: 28%; 
+}
+
+/*.innerBox{
+	height: 110px;
+  width: 30%; 
+}*/
+
+.inBox {
+	margin: auto;
+	margin-top: 12px; 
+	position: relative;
+	width: 93%;
+	height: 76%;
+	background-color: white;
+}
+
+.message {
+
+	margin-top: 20px;
+	font-family: 'Special Elite', cursive;
+	font-size: 1.2em;
+	color: black;
+	font-weight: 800;
+	
+}
+
+.metal {
+  
+  outline: none;
+  
+  font: 10px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  text-align: center;
+  color: hsla(0,0%,20%,1);
+  text-shadow: hsla(0,0%,40%,.5) 0 -1px 0, hsla(0,0%,100%,.6) 0 2px 1px;
+  
+  background-color: hsl(0,0%,90%);
+  box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 4px, /* border */
+    inset hsla(0,0%,15%, .8) 0 -1px 5px 4px, /* soft SD */
+    inset hsla(0,0%,0%, .25) 0 -1px 0px 7px, /* bottom SD */
+    inset hsla(0,0%,100%,.7) 0  2px 1px 7px, /* top HL */
+    
+    hsla(0,0%, 0%,.15) 0 -5px 6px 4px, /* outer SD */
+    hsla(0,0%,100%,.5) 0  5px 6px 4px; /* outer HL */ 
+  
+  transition: color .2s;
+}
+
+
+/* Radial ------------------------- */
+
+.radial.metal {
+	margin-left: 42%;
+  width: 55px;
+  height: 55px;
+  line-height: 48px;
+  border-radius: 80px;
+  background-image: -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+    -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
+    -webkit-radial-gradient(   0%  50%, 50%  7%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+    -webkit-radial-gradient( 100%  50%, 50%  5%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+    
+    -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   3%, hsla(0,0%,  0%,.1) 3.5%),
+    -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%,.1) 7.5%),
+    -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.2) 2.2%),
+    
+    -webkit-radial-gradient( 50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);
+}
+
+.inBox {
+		
+		background-size: cover;
+
+	}
+
+/*modal*/
+	
+	#modal {
+	    top: 0;
+	    left: 0;
+	    position: fixed;
+	    display: none;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0,0,0,.4); /* .4 is the opacity */
+	}
+
+/*	#close {
+			position: relative;
+	    float: right;
+	    font-size: 11px;
+	    border-radius: 3px;
+	    margin-right: 3px;
+	    bottom: 13px;
+	    background-color: white;
+
+	}*/
+
+	.modal-content {
+	  position: relative;
+	  margin: 0 30%;
+	  background-color: white;
+	  top: 200px;
+
+	  margin:auto;
+	  width: 30%; /* 40% of the parent container*/
+	  height: 20%;
+
+	}
+
+	.modal-header {
+	  padding: 0;
+	  background-color: white;
+	  width: 100%;
+	  height: 70px;
+	  text-align: center;
+	  
+	}
+
+	.modal-body {
+	  position: absolute;
+	  width: 100%;
+	  top: 50px;
+	  background-color: white;
+	  border-top: 2px solid #2A72B2;
+	  border-bottom-right-radius: 5px; 
+	  border-bottom-left-radius: 5px;
+	  font-size: 10px;
+	  
+	}
+
+
+	h3 {
+	  font-size: 14px;
+	
+	}
+
+	#nickName{
+		position: relative;
+		left: 25%;
+		width: 50%;
+		margin-bottom: 10px;
+		margin-left: auto;
+	}
+
+	#fbutton{
+
+		width: 50%;
+		margin: auto;
+		height: 20px;
+		line-height: 1px;
+		font-size: 12px
+	}
+
+
+
+
+/*
+@media(max-width: 300px){
+	.container{
+		width: 200px;
+		height: 200px;
+	 	left: 2%;
+	 	top: 2%;		
+	}
+	.box{
+		position: relative;
+	margin: auto;
+	left: 5%;
+	top: 5%;
+	width: 10%;
+	height: 10%;
+	display: inline-block;
+	margin: 7px;
+	background-color: black;
+	vertical-align:top;
+	text-align: center;	
+
+	}
+}*/
