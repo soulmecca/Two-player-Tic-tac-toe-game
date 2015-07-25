@@ -1,2 +1,2 @@
-this app is uploaded in 
+this app is uploaded at 
 # http://tictactoe-danny.herokuapp.com/  
